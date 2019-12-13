@@ -1,36 +1,31 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Sf-Theme
- */
+    <footer class="page-footer fixed-bottom font-small teal pt-4">
+      <div class="container-fluid text-center text-md-left">
+        <div class="row">
+          <div class="col-md-6 mt-md-0 mt-3 footer_menu">
+            <ul class="list-unstyled">
+              <?php
 
-?>
+                  $args  = array('theme_location' => 'footer' );
 
-	</div><!-- #content -->
+               ?>
+              <?php wp_nav_menu($args); ?>
+            </ul>
+          </div>
+          <hr class="clearfix w-100 d-md-none pb-3">
+          <div class="col-md-6 mb-md-0 mb-3">
+            <h5 class="text-uppercase font-weight-bold"><?php bloginfo('name') ?></h5>
+            <p><?php bloginfo('description') ?></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center py-3">
+        <p>&copy; <?php echo Date('Y'); ?> Copyright: <?php bloginfo('name') ?></p>
+      </div>
+    </footer>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sf-theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'sf-theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'sf-theme' ), 'sf-theme', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
 
-<?php wp_footer(); ?>
-
-</body>
+  </body>
 </html>
+<!-- © 2018 Copyright -->
