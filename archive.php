@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Sf-Theme
+ * @package SF-THEME
  */
 
 get_header();
